@@ -1,0 +1,267 @@
+.price_giam{
+  display: flex;
+  justify-content: flex-start;
+  font-size: 1.0rem;
+  padding-top: 4px;
+  color: #9d2226;
+  font-weight: 600;
+
+}
+.guidanhgia{
+  background-color: #000000;
+  color: white;
+}
+.guidanhgia:hover{
+  background-color: #1b1b1b;
+  transition: all 0.5s ease;
+  color: white;
+}
+.gia_detail{
+  align-items: center;
+  padding-top: 2px;
+  margin-right: 20px;
+}
+.price_goc{
+  color: #3a3939;
+  font-size: 15px;
+  padding-left: 5px;
+}
+.name_detail{
+  text-transform: capitalize;
+  font-size: .90rem;
+  line-height: 1.0625rem;
+  font-weight: 600;
+  
+}
+.name_detail{
+  font-size: .90rem;
+  font-weight: 500;
+}
+.sl_ratings{
+  color: black;
+  font-size: .75rem;
+  line-height: 1rem;
+}
+.size_detail .size_button{
+  width: 75px;
+  height: 40px;
+  font-weight: 500;
+  font-size: 13px;
+  margin-right: 5px;
+  margin-top: 5px;
+  border-radius: 5px;
+  background-color: white;
+  border: 0.5px solid #e2dfdf;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.size_detail .size_button.active {
+  border: 1px solid #272727;
+}
+.item_detail{
+  font-size: 10px;
+  padding: 3px;
+  margin-left: 5px;
+  margin-right: 5px;
+  color: #bebebe;
+}
+.button_detail{
+  width: 80%;
+  color: white;
+  border: none;
+  padding: 10px;
+  border-radius: 30px;
+  background-color: #000;
+}
+.button_detail:hover{
+  transition: all 0.3s ease-in;
+  background-color: #272727;
+}
+.Detail{
+  font-size: .80rem;
+  font-weight: 500;
+  color: #4d4d4d;
+}
+.danhgia{
+  font-size: 1.875rem;
+  line-height: 2.25rem;
+  font-weight: 600;
+}
+.view_ratings{
+  font-size: .75rem;
+  line-height: 1rem;
+}
+.ratings-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.5rem;
+  width: 62%;
+}
+.thongbao_reviews{
+  color: rgb(0, 0, 0);
+  background-color: #f7efefcc;
+}
+.progress-bar {
+  height: auto;
+}
+
+.review-item {
+  border-bottom: 1px solid #ddd;
+  padding-bottom: 10px;
+}
+.text-warning_1{
+  color: #e0aa1d;
+}
+.review-item .text-warning {
+  font-size: 1.2rem;
+}
+
+.review-item p {
+  margin-top: 0.5rem;
+  font-size: 1rem;
+}
+
+.review-item .text-muted {
+  font-size: 0.875rem;
+  color: #6c757d;
+}
+
+form h5 {
+  margin-bottom: 1rem;
+}
+
+
+
+
+/* Đặt lại kích thước cho thanh đo đánh giá trên các màn hình nhỏ */
+@media (max-width: 768px) {
+  .ratings-section {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .col-md-4{
+      margin-top: 20px;
+  }
+  .rating-bar {
+    margin-top: 1rem;
+    width: 80%;
+  }
+
+  .progress {
+    width: 100%;
+  }
+
+  .progress-bar {
+    height: 8px;
+  }
+
+  .comments-section form {
+    margin-top: 1rem;
+  }
+  .ratings-section{
+    width: 100%;
+  }
+}
+
+/* Đặt lại padding và căn lề cho các thành phần trên màn hình nhỏ hơn */
+@media (max-width: 576px) {
+  .ratings-section {
+    text-align: left;
+  }
+
+  .progress-bar {
+    height: auto;
+  }
+
+  .review-item {
+    font-size: 0.9rem;
+  }
+
+  .review-item p {
+    font-size: 0.875rem;
+  }
+
+  .review-item .text-muted {
+    font-size: 0.75rem;
+  }
+
+  .comments-section form input,
+  .comments-section form textarea,
+  .comments-section form select {
+    font-size: 0.875rem;
+    padding: 0.5rem;
+  }
+
+  .comments-section form button {
+    font-size: 0.9rem;
+    padding: 0.75rem;
+  }
+}
+/* #product-test {
+  width: 100%;
+} */
+/* Điều chỉnh form bình luận cho màn hình nhỏ */
+@media (max-width: 992px) {
+  .comments-section form {
+    margin-top: 1.5rem;
+  }
+
+  .comments-section form input,
+  .comments-section form textarea,
+  .comments-section form select {
+    font-size: 1rem;
+    padding: 0.75rem;
+  }
+
+  .comments-section form button {
+    font-size: 1rem;
+    padding: 1rem;
+  }
+}
+
+.btn-prev {
+  background-color: none;
+  padding: .5rem;
+  border-radius: 50%;
+  color: #000000;
+  border: none;
+}
+.btn-prev i {
+font-size: 2rem;
+}
+.btn-prev:hover {
+background-color: #000000;
+color: #ddd;
+}
+.btn-next {
+  background-color: none;
+  padding: .5rem;
+  border-radius: 50%;
+  color: #000000;
+  border: none;
+
+}
+.btn-next i {
+font-size: 2rem;
+}
+.btn-next:hover {
+background-color: #000000;
+color: #ddd;
+}
+
+.detail-page .product {
+  width: 100%; /* Đảm bảo sản phẩm trong trang chi tiết có chiều rộng 100% */
+}
+
+/* Định dạng cho các sản phẩm gợi ý */
+.detail-page .row {
+  display: flex;
+  flex-wrap: wrap; /* Đảm bảo các sản phẩm gợi ý có thể nằm trên cùng một hàng */
+}
+
+.detail-page .col-12 {
+  flex: 0 0 25%; /* 4 sản phẩm trên 1 hàng */
+  max-width: 25%; /* 4 sản phẩm trên 1 hàng */
+}

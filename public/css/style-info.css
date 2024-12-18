@@ -1,0 +1,106 @@
+/* ---------------------------------------css trang info----------------------------------------------- */
+
+/* Avatar Wrapper */
+
+#box-avatar {
+    position: relative;
+  }
+  .avatar-wrapper {
+    position: absolute;
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    overflow: hidden;
+    cursor: pointer;
+    transition: transform 0.3s ease-in-out;
+    top: 10%;
+    right: 30%;
+  }
+  
+  .avatar-wrapper:hover {
+    transform: scale(1.05);
+  }
+  
+  /* Avatar Image */
+  #avatar-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+    display: block;
+    border: 1px solid #e7dede;
+  
+  }
+  
+  /* Overlay Effect */
+  .avatar-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    border-radius: 50%;
+    transition: opacity 0.3s ease-in-out;
+  }
+  
+  .avatar-wrapper:hover .avatar-overlay {
+    opacity: 1;
+  }
+  
+  /* "+" Icon */
+  .avatar-overlay span {
+    color: white;
+    font-size: 2rem;
+    font-weight: bold;
+  }
+  
+  /* Hide File Input */
+  #avatar-input {
+    display: none;
+  }
+  #form-info .username,
+  #form-info .email,
+  #form-info .phone,
+  #form-info .address {
+    position: relative;
+    margin-bottom: 20px; /* Thêm khoảng cách giữa các input */
+  }
+  
+  #form-info .username label,
+  #form-info .email label,
+  #form-info .phone label,
+  #form-info .address label {
+    margin-bottom: 3px;
+  }
+  
+  #form-info label {
+    position: absolute;
+    left: 10px;
+    top: 10px;
+    transition: 0.2s ease all;
+    color: #999; /* Màu label */
+  }
+  
+  #form-info .username input,
+  #form-info .email input,
+  #form-info .phone input,
+  #form-info .address input {
+    border: none;
+    border-bottom: 1px solid #d3d3d3; /* Chỉ border dưới */
+    outline: none;
+    padding: 10px 0; /* Padding cho input */
+    width: 100%;
+    font-size: 1rem; /* Kích thước chữ */
+  }
+  
+  #form-info .username input:focus,
+  #form-info .email input:focus,
+  #form-info .phone input:focus,
+  #form-info .address input:focus {
+    border-bottom: 1px solid #e22222; /* Màu border khi focus */
+  }

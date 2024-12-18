@@ -1,0 +1,70 @@
+
+.pagination {
+  display: flex;
+  justify-content: center; /* Căn giữa các nút phân trang */
+  margin-top: 10px; /* Khoảng cách phía trên */
+  margin-bottom: 30px;
+  flex-wrap: wrap; /* Khi màn hình nhỏ, các nút sẽ xuống hàng */
+}
+
+.pagination button {
+  width: 20px;
+  height: 20px;
+  font-size: 12px;
+  margin: 5px; /* Khoảng cách giữa các nút */
+  padding: 0px 4px; /* Kích thước nút */
+  border: 1px solid #ececec; /* Viền xung quanh nút */
+  background-color: #f8f9fa; /* Màu nền nhạt cho các nút */
+  color: #333; /* Màu chữ cho các nút */
+  border-radius: 2px; /* Bo tròn các góc */
+  cursor: pointer; /* Thay đổi con trỏ khi di chuột qua */
+  transition: background-color 0.3s ease; /* Hiệu ứng chuyển màu */
+}
+
+.pagination button:hover {
+  background-color: #000000; /* Màu nền khi hover */
+  color: white; /* Màu chữ khi hover */
+}
+
+.pagination .btn-dark {
+  background-color: #000000; /* Màu nền cho nút trang hiện tại */
+  color: white; /* Màu chữ trắng cho nút hiện tại */
+  border-color: #000000; /* Viền cùng màu với nền */
+}
+
+.pagination .btn-outline-dark {
+  background-color: white; /* Màu nền cho các nút không phải là trang hiện tại */
+  color: #000000; /* Màu chữ cho nút không phải trang hiện tại */
+  border-color: #000000; /* Màu viền cho nút không phải trang hiện tại */
+}
+
+.pagination .btn-outline-dark:hover {
+  background-color: #000000; /* Màu nền khi hover */
+  color: white; /* Màu chữ khi hover */
+}
+
+
+
+/* Responsive: khi màn hình nhỏ hơn 768px */
+@media (max-width: 768px) {
+  .pagination button {
+    width: 30px;
+    height: 30px;
+    padding: 6px 8px; /* Giảm kích thước padding cho màn hình nhỏ */
+    font-size: 13px; /* Giảm kích thước chữ */
+  }
+}
+
+/* Responsive: khi màn hình nhỏ hơn 576px */
+@media (max-width: 576px) {
+  .pagination {
+    align-items: center;
+    display: flex;
+    justify-content: center; /* Căn giữa theo trục dọc */
+  }
+
+  .pagination button {
+    width: 30px; /* Nút chiếm toàn bộ chiều rộng màn hình */
+    margin: 5px; /* Khoảng cách trên và dưới mỗi nút */
+  }
+}

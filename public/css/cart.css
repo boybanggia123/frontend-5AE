@@ -1,0 +1,195 @@
+
+.col-md-2{
+    margin-top: 5px;
+}
+.card{
+    max-height: none;
+    overflow-y: hidden;
+    
+}
+.so_luong_cart{
+    margin-left: 3px;
+    font-size: 12px;
+    font-weight: 500;
+    letter-spacing: -1px; 
+}
+.products_lienquan{
+    border: none;
+    border-radius: none;
+}
+.products_lienquan {
+    position: relative; /* Để các phần tử con có thể định vị tuyệt đối */
+  }
+  
+  .product-image-container {
+    position: relative; /* Để đảm bảo icon được hiển thị trên ảnh */
+  }
+  
+  .product-image-container img {
+    width: 100%; /* Đảm bảo ảnh chiếm hết chiều rộng của phần tử */
+    height: auto;
+  }
+  
+  .cart-icon {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    background-color: white;
+    border-radius: 50%;
+    padding: 5px 8px;
+    color: black;
+    font-size: 16px;
+  }
+  
+  .cart-icon i {
+    pointer-events: none; /* Đảm bảo không có sự kiện hover vào icon */
+  }
+  
+.cart_price{
+    display: flex;
+}
+.cart_price .cart_goc{
+    font-size: 10px;
+    font-weight: 500;
+}
+.cart_price .cart_discountedPrice{
+    padding-right: 5px;
+    color: #9d2226;
+    line-height: 15px;
+    font-size: .9375rem;
+    font-weight: 600;
+}
+
+.search{
+    font-size: 16px;
+    font-weight: bolder;
+}
+.col-md-10 a{
+    font-size: .75rem;
+    font-weight: 600;
+}
+.col-md-10 p{
+    font-size: .75rem;
+    font-weight: 600;
+}
+.cart-giohang{
+    font-size: 1rem;
+    line-height: 1.5625rem;
+    font-weight: 900;
+    letter-spacing: -.0625rem;
+    color: #000;
+}
+.form-select{
+    font-size: .75rem;
+    width: 80px;
+    margin-right:10px;
+}
+.form-control-2::-webkit-inner-spin-button,
+.form-control-2::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+.form-control-2{
+    font-weight: bolder;
+    border:none;
+    width: 50px;
+    text-align: center;
+}
+.form-control-2:focus{
+    outline: none;
+    box-shadow: none;
+    border: none;
+}
+.btn-outline-secondary-1{
+    padding: 0;
+    font-size: 20px;
+    font-weight: bolder;
+    border: none;
+}
+.btn-outline-secondary-1:focus {
+    outline: none;
+    box-shadow: none;
+    border: none;
+}
+
+  
+.col-3{
+    padding: 5px;
+}
+.list-unstyled{
+    font-weight: bolder;
+    font-size: .75rem;
+}
+.list-unstyled span{
+    padding-top: 5px;
+}
+.tongtien {
+    font-weight: bolder;
+}
+.codegiamgia{
+    display: flex;
+}
+.btn-success{
+    border-radius: 0 5px 5px 0;
+}
+.codegiamgia .form-control-3{
+
+    width: 100%;
+    padding: 10px;
+}
+.logothanhtoan i{
+    font-size: 35px;
+    color: #000;
+}
+.logothanhtoan i:hover{
+    transition: all 0.45s;
+    color: #4e4d4d;
+}
+.Total{
+    font-weight: bolder;
+}
+/* Đảm bảo rằng thẻ cha có position relative để icon có thể được đặt tuyệt đối */
+.product-image-container {
+    position: relative;
+    overflow: hidden;
+  }
+  
+  /* Ảnh sản phẩm */
+  .product-image {
+    width: 100%;
+    height: auto;
+    transition: opacity 0.3s ease; /* Thêm hiệu ứng mờ dần */
+  }
+  
+  /* Icon thùng rác - ẩn mặc định */
+  .remove-icon {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 22px;
+    color: #ff0008;
+    padding: 8px;
+    border-radius: 50%;
+    display: none; /* Ẩn icon mặc định */
+    cursor: pointer;
+    transition: opacity 0.3s ease; /* Thêm hiệu ứng hiện dần */
+    opacity: 0;
+  }
+  
+  /* Khi hover vào ảnh, làm mờ ảnh và hiện icon thùng rác */
+  .product-image-container:hover .product-image {
+    opacity: 0.7; /* Mờ ảnh khi hover */
+  }
+  
+  .product-image-container:hover .remove-icon {
+    display: block;
+    opacity: 2; /* Hiện icon với hiệu ứng hiện dần */
+  }
+  
+@media(max-width:650px){
+    .col-md-2 img{
+        width: auto;
+        height: auto;
+    }
+  }

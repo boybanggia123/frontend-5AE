@@ -1,0 +1,238 @@
+/* *{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+} */
+body {
+  margin: 0;
+  padding-top: 60px; /* Chiều cao của header */
+}
+body.modal-open {
+  overflow: hidden; /* Ẩn thanh cuộn dọc */
+  overflow-x: hidden; /* Ẩn thanh cuộn ngang */
+  padding-right: 0 !important; /* Loại bỏ padding-right */
+}
+body{
+  overflow: hidden; /* Ẩn thanh cuộn dọc */
+  overflow-x: hidden; /* Ẩn thanh cuộn ngang */
+  padding-right: 0 !important; /* Loại bỏ padding-right */
+  margin: 0;
+}
+header img {
+  width: 150px; /* Điều chỉnh kích thước */
+  height: auto; /* Giữ tỉ lệ */
+}
+
+
+/* --------------------------Dịch vụ ------------------------------- */
+.text_dichvu{
+  color: #7a7979;
+}
+.feature-item {
+  border: 1px solid #aaaaaa; /* Viền cho mỗi ô */
+  text-align: center;
+  padding: 10px;
+  transition: all 0.3s ease;
+  border-radius: 0px;
+}
+
+.feature-icon {
+  font-size: 30px;
+  color: #d3be00; /* Màu vàng */
+}
+
+.feature-text {
+  font-size: 16px;
+  font-weight: bold;
+  margin-top: 10px;
+}
+/* ----------------------------end dich vụ---------------------------------- */
+
+.relative video{
+    width: 1399px;
+    height: auto;
+}
+.banner-1 img{
+    width: 100%;
+    height: auto;
+}
+.product-card {
+    border: none;
+    transition: transform 0.3s ease;
+  }
+  .product-card:hover {
+    transform: scale(1.05);
+  }
+  .product-image {
+    position: relative;
+  }
+  .quick-add-btn {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+  }
+  .product-image:hover .quick-add-btn {
+    opacity: 1;
+  }
+  .product-title {
+    font-weight: 600;
+    color: #000;
+  }
+  .product-price {
+    font-size: 1.2rem;
+  }
+  .product-offer {
+    font-size: 0.9rem;
+    color: #555;
+  }
+.namesup{
+    font-size: 12px;
+}
+.custom-container {
+    max-width: 1140px;
+    margin: 0 auto;
+}
+.text_h2{
+    font-size: 25px;
+    font-weight: 500;
+}
+.button_new button{
+    width: 50px;
+    padding: 3px;
+    border-radius: 20px;
+    font-weight: 500;
+    font-size: 14px;
+    height: auto;
+    color: black;
+    background: white;
+    border: 0.5px solid #b1adad;
+}
+.button_new button:hover{
+    background: #000;
+    color: white;
+    transition: all 0.5s;
+}
+/* .button_new button{
+    padding: 10px;
+    font-size: 14px;
+    font-weight: 500;
+} */
+.w-img .sup-wimg{
+    font-size: 14px;
+    height: 13%;
+}
+.w-img .sup-wimg:hover{
+  background-color: rgb(43, 43, 43);
+}
+
+/* Đặt nền xám cho phần chứa ảnh */
+.gray-background {
+  position: relative;
+  overflow: hidden; /* Đảm bảo phần khung không bị thay đổi khi ảnh phóng to */
+  width: 100%; /* Đảm bảo chiều rộng khung */
+  height: 100%; /* Đảm bảo chiều cao khung */
+}
+
+.img-fluid {
+  transition: transform 0.3s ease, filter 0.3s ease;
+  display: block;
+  width: 100%; /* Giữ ảnh vừa với khung */
+  height: auto; /* Giữ tỉ lệ ảnh */
+}
+
+.w-img:hover .img-fluid {
+  transform: scale(1.1); /* Phóng to ảnh khi hover */
+  filter: brightness(1); /* Giảm độ sáng ảnh */
+}
+
+
+.price{
+    font-size: 14px;
+    font-weight: bolder;
+    display: flex;
+    justify-content: flex-start;
+}
+.price p{
+  font-size: 0.8625rem;
+  color: #9d2226;
+}
+.price del{
+  color: #000000;
+  padding-left: 5px;
+  /* padding-top: 3px; */
+  font-size: .75rem;
+  font-weight: 400;
+}
+
+.video-container {
+  position: relative;
+  width: 100%;
+  padding-bottom: 39.5%; /* Tỷ lệ 16:9 */
+}
+
+.video-container video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: auto;
+  object-fit: cover; /* Giúp video luôn giữ đúng tỷ lệ và che đầy khung */
+}
+
+.custom-margin {
+  margin-top: 2rem; 
+  margin-left: 6rem;
+  margin-right: 6rem;
+}
+
+
+
+
+/* Mobile (portrait) */
+@media (max-width: 760px) {
+  .custom-margin{
+    margin-top: 5px;
+    margin-left: 15px;
+    margin-right: 15px;
+  }
+  .mb-3{
+    margin-bottom: 0px !important;
+  }
+  .text_h2{
+    font-size: 20px;
+    font-weight: bolder;
+  }
+  /* CSS cho các thiết bị di động */
+}
+
+
+/* Tablet (portrait) */
+@media (min-width: 768px) and (max-width: 1024px) {
+  .products_Home {
+    margin-top: 0px;
+  }
+  /* CSS cho máy tính bảng dọc */
+}
+
+/* Tablet (landscape) */
+@media (min-width: 1024px) and (max-width: 1280px) {
+  /* CSS cho máy tính bảng ngang */
+}
+
+/* Small Desktop */
+@media (min-width: 1024px) and (max-width: 1280px) {
+  /* CSS cho desktop nhỏ */
+}
+
+/* Medium Desktop */
+@media (min-width: 1280px) and (max-width: 1440px) {
+  /* CSS cho desktop vừa */
+}
+
+/* Large Desktop */
+@media (min-width: 1440px) {
+  /* CSS cho desktop lớn */
+}

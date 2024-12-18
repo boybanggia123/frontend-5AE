@@ -1,0 +1,22 @@
+/* ----------------------------form email -------------------------------------- */
+.auth-container{
+    width: 400px;
+    background-color: white;
+    border-radius: 0%;
+    box-shadow: 0px 2px 9px #e5e2e2;
+  }
+  .auth-container .email_button{
+    font-size: 14px;
+    font-weight: bolder;
+    background-color: #0a0a0a;
+    color: white;
+    border: none;
+    padding: 10px;
+  }
+  .auth-container .email_button:hover{
+    background-color: #292727;
+  }
+  .auth-container h5{
+    text-align: center;
+  }
+  /* -------------------------end emai--------------------------------- */

@@ -1,0 +1,45 @@
+.fav-fs {
+    font-size: .80rem;
+    font-weight: 500;
+    color: #4d4d4d;
+}
+.item-fav {
+    font-size: 10px;
+    padding: 3px;
+    margin-left: 5px;
+    margin-right: 5px;
+    color: #bebebe;
+}
+
+.product-favourite {
+    display: flex; /* Sử dụng Flexbox để sắp xếp các sản phẩm nằm ngang */
+    flex-wrap: wrap; /* Cho phép các sản phẩm xuống dòng khi không đủ không gian */
+}
+#favourite-item{
+    width: 100%; /* Mặc định cho col-12 */
+    margin: 5px; /* Giữ nguyên margin */
+    padding: 10px;
+    box-sizing: border-box;
+  }
+  
+  /* Responsive cho kích thước nhỏ (sm) */
+  @media (min-width: 576px) {
+      #favourite-item {
+          width: calc(50% - 10px); /* col-sm-6 */
+      }
+  }
+  
+  /* Responsive cho kích thước trung bình (md) */
+  @media (min-width: 768px) {
+      #favourite-item {
+          width: calc(33.33% - 10px); /* col-md-4 */
+      }
+  }
+  
+  /* Responsive cho kích thước lớn (lg) */
+  @media (min-width: 992px) {
+      #favourite-item {
+          width: calc(25% - 10px); /* col-lg-3 */
+      }
+  }
+  

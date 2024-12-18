@@ -1,0 +1,273 @@
+/* Phần bộ lọc */
+.custom-filter-section {
+    background-color: #ffffff;
+    height: auto;
+    overflow-y: auto; /* Cuộn dọc nếu nội dung bộ lọc dài */
+    padding: 20px;
+    box-shadow: 2px 0 2px -2px rgba(61, 61, 61, 0.3);
+  }
+  .Categories_phai{
+    font-size: .8125rem;
+    font-weight: bold; /* Chữ đậm */
+    margin-bottom: 15px; /* Khoảng cách bên dưới */
+    text-transform: uppercase; /* Viết hoa tất cả chữ */
+    color: #333; /* Màu chữ đậm */
+  }
+  .form-control:focus{
+    outline: none; /* Loại bỏ viền mặc định */
+    box-shadow: none; /* Loại bỏ hiệu ứng viền xanh */
+    border-color: #ccc; /* Đặt màu viền mong muốn, ví dụ là màu xám nhạt */
+  }
+  .form-select:focus {
+    outline: none; /* Loại bỏ viền mặc định */
+    box-shadow: none; /* Loại bỏ hiệu ứng viền xanh */
+    border-color: #ccc; /* Đặt màu viền mong muốn, ví dụ là màu xám nhạt */
+  }
+  
+  .custom-filter h6 {
+    font-size: .8125rem;
+    font-weight: 500;
+  }
+  .ms-2{
+    font-weight: 500;
+  }
+  .custom-filter ul {
+    padding-left: 0;
+  }
+  
+  .custom-filter li {
+    list-style: none;
+    margin-bottom: 8px;
+  }
+  
+  .custom-view-more {
+    color: #007bff;
+    font-weight: bold;
+  }
+  
+  .custom-view-more:hover {
+    text-decoration: underline;
+  }
+ /* Ẩn checkbox mặc định */
+ .label_trai{
+    font-weight: 400;
+    letter-spacing: .015625rem;
+    color: #000;
+ }
+
+.input_checkbox {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    padding-left: 0px;
+    font-size: .8125rem;
+  }
+  
+  /* Tạo ô vuông tùy chỉnh cho checkbox */
+  .input_checkbox + label {
+    position: relative;
+    padding-left: 30px; /* Khoảng cách giữa checkbox và text */
+    cursor: pointer;
+    font-size: .8125rem;
+    user-select: none;
+  }
+  
+  /* Hộp vuông cho checkbox */
+  .input_checkbox + label:before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 20px;
+    height: 20px;
+    background-color: #fff;
+    border: 1px solid #e7e7e7;
+    border-radius: 1px;
+  }
+  
+  /* Khi checkbox được chọn */
+  .input_checkbox:checked + label:before {
+    background-color: #000;
+    border-color: #000;
+  }
+  
+  /* Tạo dấu tích khi checkbox được chọn */
+  .input_checkbox:checked + label:after {
+    content: "";
+    position: absolute;
+    left: 8px;
+    top: 4px;
+    width: 5px;
+    height: 10px;
+    border: solid white;
+    border-width: 0 2px 2px 0;
+    transform: rotate(45deg);
+  }
+  
+  /* Phần sản phẩm */
+  .custom-product-section {
+    padding-left: 30px;
+    height: auto;
+    overflow-y: auto; /* Cuộn dọc nếu sản phẩm dài */
+  }
+  .Products_show{
+    font-weight: bolder;
+    font-size: 18px;
+  }
+  .custom-product-card {
+    border: none;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease-in-out;
+  }
+  
+  .custom-product-card:hover {
+    transform: scale(1.05);
+  }
+  
+  .custom-new-tag {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    background-color: #28a745;
+    color: white;
+    padding: 5px 10px;
+    font-size: 12px;
+    font-weight: bold;
+    border-radius: 4px;
+  }
+  
+  .card-img-top {
+    border-radius: 5px;
+  }
+  
+  .card-title {
+    font-size: 16px;
+    font-weight: bold;
+  }
+  
+  .custom-old-price {
+    text-decoration: line-through;
+    color: #999;
+    font-size: 14px;
+  }
+  
+  /* Bố cục sản phẩm */
+  .custom-product-grid .col-md-3 {
+    padding: 10px;
+  }
+  
+  .custom-select {
+    width: 200px;
+  }
+  
+  .custom-grid-btn {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    padding: 8px 12px;
+    font-size: 16px;
+    border-radius: 5px;
+  }
+  
+  .custom-grid-btn:hover {
+    background-color: #f0f0f0;
+  }
+
+  /* Ẩn thanh cuộn cho Firefox */
+  .custom-filter-section,
+  .custom-product-section {
+    scrollbar-width: none; /* Ẩn thanh cuộn */
+  }
+  /* Ẩn thanh cuộn cho Chrome, Safari và Edge */
+  .custom-filter-section::-webkit-scrollbar,
+  .custom-product-section::-webkit-scrollbar {
+    display: none;
+  }
+  /* Ẩn thanh cuộn cho phần sản phẩm */
+  .custom-product-section {
+    padding-left: 30px;
+    height: auto;
+    overflow-y: scroll; /* Cho phép cuộn dọc */
+  }
+  
+ 
+/* css hot & discout */
+.hot {
+  top: 5px;
+  right: 5px;
+  background-color: crimson;
+  color: white;
+  font-size: 0.6rem; 
+  padding: 3px 10px;
+  font-weight: bold;
+  box-shadow: 0px 2px 2px 1px rgb(114, 98, 98);
+  border-radius: 10px 0px 10px 0px;
+
+}
+.discount {
+  top: 5px;
+  left: 5px;
+  padding: 3px 6px;
+  background-color: #333;
+  color: white;
+  font-size: 0.6rem;
+  border-radius: 0px 12px 0px 12px;
+  box-shadow: 1px 2px 2px rgb(114, 98, 98);
+}
+
+/* css discout */
+
+/* css favourite */
+.icon-favourite {
+  cursor: pointer;
+}
+
+.icon-favourite .active {
+  fill: #000;
+
+}
+
+.notification {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  text-align: center;
+  padding: 10px 20px;
+  border-radius: 5px;
+  opacity: 0; /* Bắt đầu với độ mờ 0 */
+  transition: opacity 0.5s ease-in-out; /* Hiệu ứng chuyển tiếp */
+  z-index: 1000; /* Đảm bảo thông báo nằm trên cùng */
+}
+
+.notification.success {
+  background-color: #000; /* Màu nền xanh cho thông báo thành công */
+  color: white; /* Màu chữ trắng */
+}
+
+.notification.error {
+  background-color: #f44336; /* Màu nền đỏ cho thông báo lỗi */
+  color: white; /* Màu chữ trắng */
+}
+
+.notification.show {
+  opacity: 1; /* Độ mờ 1 khi hiển thị */
+}
+
+
+/* css favourite */
+.load-more-btn {
+  font-size: 14px;
+  background-color: black;
+  color: white;
+  border-radius: 2px; /* Làm cho góc bo tròn */
+  padding: 5px 20px; /* Điều chỉnh kích thước nút */
+  border: 1px solid transparent; /* Thêm viền trong trạng thái bình thường */
+  cursor: pointer;
+  transition: .2s ease,; /* Thêm hiệu ứng chuyển tiếp */
+}
+
+.load-more-btn:hover {
+  background-color: white; /* Hiệu ứng khi rê chuột */
+  color: black;
+  border-color: #acacac; /* Chỉ thay đổi màu viền khi hover */
+  box-shadow: 0 2px 4px rgba(116, 116, 116, 0.2); /* Thêm hiệu ứng đổ bóng */
+}
