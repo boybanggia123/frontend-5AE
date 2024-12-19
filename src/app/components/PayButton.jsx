@@ -72,7 +72,7 @@ export default function PayButton({ total }) {
 
       try {
         const response = await axios.post(
-          "http://localhost:3000/stripe/apply-coupon",
+          `${process.env.URL_REACT}/stripe/apply-coupon`,
           { couponCode: values.couponCode, totalAmount: 100 }
         );
 
@@ -115,7 +115,7 @@ export default function PayButton({ total }) {
       const email = decoded?.email;
 
       const checkoutResponse = await axios.post(
-        `http://localhost:3000/stripe/create-checkout-session`,
+        `${process.env.URL_REACT}/stripe/create-checkout-session`,
         {
           cartItems,
           userId,

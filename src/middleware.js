@@ -1,12 +1,12 @@
 import { NextResponse } from "next/server";
-import SignInModal from "./app/components/SignInModal";
+
 export async function middleware(request) {
   const token = request.cookies.get("token");
   if (!token) {
     return NextResponse.redirect(new URL("/dangnhap", request.url));
   }
   // Gọi đến API xác thực token
-  const res = await fetch("http://localhost:3000/checktoken", {
+  const res = await fetch(`${process.env.URL_REACT}/checktoken`, {
     headers: {
       Authorization: `Bearer ${token.value}`,
     },
@@ -19,4 +19,5 @@ export async function middleware(request) {
 }
 export const config = {
   matcher: "/info",
+  runtime: 'nodejs',
 };

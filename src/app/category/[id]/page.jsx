@@ -17,7 +17,7 @@ export default function ProductByCategoryPage() {
   const { id } = useParams();
   const [products, setProducts] = useState([]);
   const { data: categorie } = useSWR(
-    `http://localhost:3000/products/${id}`,
+    `${process.env.URL_REACT}/products/${id}`,
     fetcher
   );
 
@@ -26,7 +26,7 @@ export default function ProductByCategoryPage() {
   };
   useEffect(() => {
     async function fetchProducts() {
-      const res = await fetch("http://localhost:3000/products", {
+      const res = await fetch(`${process.env.URL_REACT}/products`, {
         cache: "no-store",
       });
       const newProducts = await res.json();

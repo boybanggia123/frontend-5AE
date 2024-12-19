@@ -18,7 +18,7 @@ const Search = () => {
     setError(null); // Reset error khi bắt đầu tìm kiếm
     try {
       const response = await fetch(
-        `http://localhost:3000/search?key=${encodeURIComponent(keyword.trim())}`
+        `${process.env.URL_REACT}/search?key=${encodeURIComponent(keyword.trim())}`
       );
       if (!response.ok) {
         const errorData = await response.json();

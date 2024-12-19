@@ -30,7 +30,7 @@ export default function Cart() {
       try {
         const token = Cookies.get("token");
         if (token) {
-          const response = await axios.get("http://localhost:3000/detailuser", {
+          const response = await axios.get(`${process.env.URL_REACT}/detailuser`, {
             headers: { Authorization: `Bearer ${token}` },
           });
           const fetchedUserId = response.data._id;
@@ -51,7 +51,7 @@ export default function Cart() {
     console.log("Fetching related products for productId:", productId); // Kiểm tra giá trị productId
     try {
       const response = await axios.get(
-        `http://localhost:3000/related-products?productId=${productId}`
+        `${process.env.URL_REACT}/related-products?productId=${productId}`
       );
       if (response.data) {
         console.log("Related products:", response.data); // Kiểm tra dữ liệu trả về

@@ -1,3 +1,4 @@
+"use client"
 import { useState, useEffect } from "react";
 import axios from "axios";
 import Cookies from "js-cookie";
@@ -13,7 +14,7 @@ const CommentsAndReview = ({ user, productId, userId }) => {
   const fetchComments = async () => {
     try {
       const response = await axios.get(
-        `http://localhost:3000/productreviews/${productId}`
+        `${process.env.URL_REACT}/productreviews/${productId}`
       );
       if (response.status === 200) {
         setUserComments(response.data);
@@ -48,7 +49,7 @@ const CommentsAndReview = ({ user, productId, userId }) => {
 
     try {
       const response = await axios.post(
-        `http://localhost:3000/productreview/${productId}`,
+        `${process.env.URL_REACT}/productreview/${productId}`,
         {
           userId: user._id,
           rating,
@@ -99,7 +100,7 @@ const CommentsAndReview = ({ user, productId, userId }) => {
 
     try {
       const response = await axios.put(
-        `http://localhost:3000/productreview/${productId}/${editReview?._id}`,
+        `${process.env.URL_REACT}/productreview/${productId}/${editReview?._id}`,
         {
           userId: editReview?.userId,
           rating: editReview?.rating,
@@ -132,7 +133,7 @@ const CommentsAndReview = ({ user, productId, userId }) => {
   const handleDeleteComment = async (reviewId) => {
     try {
       const response = await axios.delete(
-        `http://localhost:3000/productreview/${productId}/${reviewId}`
+        `${process.env.URL_REACT}/productreview/${productId}/${reviewId}`
       );
 
       if (response.status === 200) {

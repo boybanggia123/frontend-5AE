@@ -16,7 +16,7 @@ function ProductsHome() {
 
   useEffect(() => {
     const fetchData = async () => {
-      const res = await fetch("http://localhost:3000/products", { cache: "no-store" });
+      const res = await fetch(`${process.env.URL_REACT}/products`, { cache: "no-store" });
       const result = await res.json();
       setData(result);
     };

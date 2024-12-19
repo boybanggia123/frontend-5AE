@@ -1,23 +1,24 @@
+// OtpPage.js
 "use client";
-import { useSearchParams, useRouter } from "next/navigation";
-import { useState, useEffect } from "react";
+import { Suspense, useState, useEffect } from "react";
+import {  useRouter } from "next/navigation";
 import OtpVerificationForm from "../../components/OtpVerificationForm";
 
 export default function OtpPage() {
-  const router = useRouter();
-  const searchParams = useSearchParams();
+  const router = useRouter(); // Sử dụng useRouter để lấy thông tin từ query params
   const [email, setEmail] = useState(null);
 
   useEffect(() => {
-    const emailParam = searchParams.get("email");
+    // Lấy email từ query params qua useRouter
+    const emailParam = router.query.email;
     if (emailParam) {
       setEmail(emailParam);
     }
-  }, [searchParams]);
+  }, [router.query]); // Khi query thay đổi, useEffect sẽ được gọi lại
 
   const handleOtpSubmit = async (otp) => {
     try {
-      const response = await fetch("http://localhost:3000/verify-otp", {
+      const response = await fetch(`${process.env.URL_REACT}/verify-otp`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -28,10 +29,10 @@ export default function OtpPage() {
       const data = await response.json();
 
       if (response.ok) {
-        alert(data.message); // Nếu thành công, hiển thị thông báo thành công
-        router.push(`/auth/reset-password?email=${encodeURIComponent(email)}`);
+        alert(data.message);
+        router.push(`/auth/reset-password?email=${encodeURIComponent(email)}`); // Chuyển hướng sau khi OTP hợp lệ
       } else {
-        alert(data.message); // Nếu có lỗi, hiển thị thông báo lỗi
+        alert(data.message);
       }
     } catch (error) {
       console.error("Có lỗi xảy ra:", error);
@@ -39,9 +40,13 @@ export default function OtpPage() {
     }
   };
 
-  return email ? (
-    <OtpVerificationForm onSubmit={handleOtpSubmit} />
-  ) : (
-    <p>Loading...</p>
+  return (
+    <Suspense fallback={<p>Loading...</p>}>
+      {email ? (
+        <OtpVerificationForm onSubmit={handleOtpSubmit} />
+      ) : (
+        <p>Loading...</p>
+      )}
+    </Suspense>
   );
 }

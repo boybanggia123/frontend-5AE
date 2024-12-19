@@ -1,11 +1,16 @@
-// next.config.mjs
-
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-    images: {
-      domains: ['localhost'], // Thêm domain của server ảnh
-    },
-  };
-  
+  images: {
+    domains: ['localhost'],
+  },
+  webpack: (config) => {
+    
+    config.resolve.alias = {
+      ...config.resolve.alias,
+      'lodash-es': 'lodash',
+    };
+    return config;
+  },
+};
+
 export default nextConfig;
-  

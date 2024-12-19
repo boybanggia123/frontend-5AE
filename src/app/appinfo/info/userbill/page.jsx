@@ -38,7 +38,7 @@ export default function InfoBillModern() {
       const fetchOrders = async () => {
         try {
           const response = await fetch(
-            `http://localhost:3000/stripe/orderuser/${userId}`
+            `${process.env.URL_REACT}/stripe/orderuser/${userId}`
           );
           const data = await response.json();
           setOrders(data);
@@ -54,7 +54,7 @@ export default function InfoBillModern() {
   const handleOrderClick = async (orderId) => {
     try {
       const response = await fetch(
-        `http://localhost:3000/stripe/orders/${orderId}`
+        `${process.env.URL_REACT}/stripe/orders/${orderId}`
       );
       const data = await response.json();
       setSelectedOrder(data);

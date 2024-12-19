@@ -3,7 +3,7 @@ export default async function handler(req, res) {
   if (req.method === "POST") {
     // Gọi đến backend của bạn ở đây
     const response = await fetch(
-      "http://localhost:3000/create-checkout-session",
+      `${process.env.URL_REACT}/create-checkout-session`,
       {
         method: "POST",
         headers: {

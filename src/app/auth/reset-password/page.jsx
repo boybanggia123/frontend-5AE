@@ -1,24 +1,25 @@
 "use client";
-import { useSearchParams } from "next/navigation";
-import { useState, useEffect } from "react";
+import { Suspense, useState, useEffect } from "react";
+import { useRouter } from "next/navigation";
 import PasswordResetForm from "../../components/PasswordResetForm";
 import SignInModal from "@/app/components/SignInModal";
 
 export default function ResetPasswordPage() {
   const [showModal, setShowModal] = useState(false); // Quản lý trạng thái modal
-  const searchParams = useSearchParams();
+  const router = useRouter(); // Sử dụng useRouter
   const [email, setEmail] = useState(null);
 
   useEffect(() => {
-    const emailParam = searchParams.get("email");
+    // Lấy email từ query params qua useRouter
+    const emailParam = router.query.email;
     if (emailParam) {
       setEmail(emailParam);
     }
-  }, [searchParams]);
+  }, [router.query]); // Khi query thay đổi, useEffect sẽ được gọi lại
 
   const handlePasswordSubmit = async (newPassword) => {
     try {
-      const response = await fetch("http://localhost:3000/reset-password", {
+      const response = await fetch(`${process.env.URL_REACT}/reset-password`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -39,12 +40,16 @@ export default function ResetPasswordPage() {
     }
   };
 
-  return email ? (
-    <>
-      <PasswordResetForm onSubmit={handlePasswordSubmit} />
-      <SignInModal showModal={showModal} setShowModal={setShowModal} />
-    </>
-  ) : (
-    <p>Loading...</p>
+  return (
+    <Suspense fallback={<p>Loading...</p>}>
+      {email ? (
+        <>
+          <PasswordResetForm onSubmit={handlePasswordSubmit} />
+          <SignInModal showModal={showModal} setShowModal={setShowModal} />
+        </>
+      ) : (
+        <p>Loading...</p>
+      )}
+    </Suspense>
   );
 }
