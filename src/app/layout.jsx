@@ -1,7 +1,7 @@
 // src/app/layout.jsx
 import "./globals.css";
-import Header from "./components/Header";
-import Footer from "./components/Footer";
+import Header from "./components/header";
+import Footer from "./components/footer";
 import { Inter } from "next/font/google";
 import Providers from "../redux/Provider";
 
