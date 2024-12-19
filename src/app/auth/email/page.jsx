@@ -7,7 +7,7 @@ export default function EmailPage() {
 
   const handleEmailSubmit = async (email) => {
     try {
-      const response = await fetch(`${process.env.URL_REACT}/forgot-password`, {
+      const response = await fetch(`${process.env.NEXT_PUBLIC_URL_REACT}/forgot-password`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

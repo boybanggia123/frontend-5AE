@@ -42,7 +42,7 @@ export default function InfoPage() {
     } else {
       // Fetch user information using the token
       const getUser = async () => {
-        const res = await fetch(`${process.env.URL_REACT}/detailuser`, {
+        const res = await fetch(`${process.env.NEXT_PUBLIC_URL_REACT}/detailuser`, {
           headers: {
             Authorization: `Bearer ${tokenFromCookie}`,
           },
@@ -95,7 +95,7 @@ export default function InfoPage() {
     }
 
     try {
-      const response = await fetch(`${process.env.URL_REACT}/user/update`, {
+      const response = await fetch(`${process.env.NEXT_PUBLIC_URL_REACT}/user/update`, {
         method: "PUT",
         headers: {
           Authorization: `Bearer ${tokenValue}`,

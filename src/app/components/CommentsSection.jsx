@@ -14,7 +14,7 @@ const CommentsAndReview = ({ user, productId, userId }) => {
   const fetchComments = async () => {
     try {
       const response = await axios.get(
-        `${process.env.URL_REACT}/productreviews/${productId}`
+        `${process.env.NEXT_PUBLIC_URL_REACT}/productreviews/${productId}`
       );
       if (response.status === 200) {
         setUserComments(response.data);
@@ -49,7 +49,7 @@ const CommentsAndReview = ({ user, productId, userId }) => {
 
     try {
       const response = await axios.post(
-        `${process.env.URL_REACT}/productreview/${productId}`,
+        `${process.env.NEXT_PUBLIC_URL_REACT}/productreview/${productId}`,
         {
           userId: user._id,
           rating,
@@ -100,7 +100,7 @@ const CommentsAndReview = ({ user, productId, userId }) => {
 
     try {
       const response = await axios.put(
-        `${process.env.URL_REACT}/productreview/${productId}/${editReview?._id}`,
+        `${process.env.NEXT_PUBLIC_URL_REACT}/productreview/${productId}/${editReview?._id}`,
         {
           userId: editReview?.userId,
           rating: editReview?.rating,
@@ -133,7 +133,7 @@ const CommentsAndReview = ({ user, productId, userId }) => {
   const handleDeleteComment = async (reviewId) => {
     try {
       const response = await axios.delete(
-        `${process.env.URL_REACT}/productreview/${productId}/${reviewId}`
+        `${process.env.NEXT_PUBLIC_URL_REACT}/productreview/${productId}/${reviewId}`
       );
 
       if (response.status === 200) {

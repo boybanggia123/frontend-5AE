@@ -19,7 +19,7 @@ export default function ResetPasswordPage() {
 
   const handlePasswordSubmit = async (newPassword) => {
     try {
-      const response = await fetch(`${process.env.URL_REACT}/reset-password`, {
+      const response = await fetch(`${process.env.NEXT_PUBLIC_URL_REACT}/reset-password`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

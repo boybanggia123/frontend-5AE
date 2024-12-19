@@ -18,7 +18,7 @@ export default function OtpPage() {
 
   const handleOtpSubmit = async (otp) => {
     try {
-      const response = await fetch(`${process.env.URL_REACT}/verify-otp`, {
+      const response = await fetch(`${process.env.NEXT_PUBLIC_URL_REACT}/verify-otp`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
