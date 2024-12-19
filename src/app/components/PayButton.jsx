@@ -49,7 +49,7 @@ export default function PayButton({ total }) {
   useEffect(() => {
     if (userId) {
       axios
-        .get(`http://localhost:3000/cart/${userId}`)
+        .get(`${process.env.NEXT_PUBLIC_URL}/cart/${userId}`)
         .then((res) => {
           // Lấy giỏ hàng và dispatch để cập nhật Redux
           dispatch(updateTotalAmount());
