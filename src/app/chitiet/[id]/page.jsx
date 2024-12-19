@@ -42,7 +42,7 @@ export default function Detail({ params }) {
     data: product,
     error,
     isLoading,
-  } = useSWR(`${process.env.NEXT_PUBLIC_URL_REACT}/productdetail/${params.id}`, fetcher, {
+  } = useSWR(`${process.env.NEXT_PUBLIC_URL}/productdetail/${params.id}`, fetcher, {
     refreshInterval: 6000,
   });
 
@@ -60,7 +60,7 @@ export default function Detail({ params }) {
       if (product && product.categoryId) {
         // Kiểm tra nếu product đã được khởi tạo và có categoryId
         const res = await fetch(
-          `${process.env.NEXT_PUBLIC_URL_REACT}/products?categoryId=${product.categoryId}`
+          `${process.env.NEXT_PUBLIC_URL}/products?categoryId=${product.categoryId}`
         );
         const result = await res.json();
         setRelatedProducts(result.filter((item) => item._id !== product._id)); // Lọc bỏ sản phẩm hiện tại
@@ -75,7 +75,7 @@ export default function Detail({ params }) {
       try {
         const token = Cookies.get("token");
         if (token) {
-          const response = await axios.get(`${process.env.NEXT_PUBLIC_URL_REACT}/detailuser`, {
+          const response = await axios.get(`${process.env.NEXT_PUBLIC_URL}/detailuser`, {
             headers: {
               Authorization: `Bearer ${token}`,
             },

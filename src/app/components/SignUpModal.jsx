@@ -36,7 +36,7 @@ export default function SignUpModal() {
     }),
     onSubmit: async (values, { setSubmitting, setFieldError }) => {
       try {
-        const res = await fetch(`${process.env.NEXT_PUBLIC_URL_REACT}/register`, {
+        const res = await fetch(`${process.env.NEXT_PUBLIC_URL}/register`, {
           method: "POST",
           headers: {
             "Content-Type": "application/json",

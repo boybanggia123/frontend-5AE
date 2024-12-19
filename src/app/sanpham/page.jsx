@@ -20,7 +20,7 @@ export default function ProductPage() {
   // Fetch danh mục và sản phẩm từ API
   useEffect(() => {
     async function fetchProducts() {
-      const res = await fetch(`${process.env.NEXT_PUBLIC_URL_REACT}/products`, {
+      const res = await fetch(`${process.env.NEXT_PUBLIC_URL}/products`, {
         cache: "no-store",
       });
       const newProducts = await res.json();
@@ -31,7 +31,7 @@ export default function ProductPage() {
 
   useEffect(() => {
     const getCategories = async () => {
-      const res = await fetch(`${process.env.NEXT_PUBLIC_URL_REACT}/categories`, {
+      const res = await fetch(`${process.env.NEXT_PUBLIC_URL}/categories`, {
         cache: "no-store",
       });
       const data = await res.json();

@@ -11,7 +11,7 @@ export default function HomeContent() {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const res = await fetch(`${process.env.NEXT_PUBLIC_URL_REACT}/products`, {
+        const res = await fetch(`${process.env.NEXT_PUBLIC_URL}/products`, {
           cache: "no-store",
         });
         const result = await res.json();

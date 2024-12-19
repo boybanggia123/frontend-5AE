@@ -6,7 +6,7 @@ export async function middleware(request) {
     return NextResponse.redirect(new URL("/dangnhap", request.url));
   }
   // Gọi đến API xác thực token
-  const res = await fetch(`${process.env.URL_REACT}/checktoken`, {
+  const res = await fetch(`${process.env.NEXT_PUBLIC_URL}/checktoken`, {
     headers: {
       Authorization: `Bearer ${token.value}`,
     },

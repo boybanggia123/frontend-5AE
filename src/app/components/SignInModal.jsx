@@ -17,7 +17,7 @@ export default function SignInModal({ showModal, setShowModal }) {
     }),
     onSubmit: async (values, { setSubmitting, setFieldError }) => {
       try {
-        const res = await fetch(`${process.env.NEXT_PUBLIC_URL_REACT}/login`, {
+        const res = await fetch(`${process.env.NEXT_PUBLIC_URL}/login`, {
           method: "POST",
           headers: {
             "Content-Type": "application/json",

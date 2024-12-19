@@ -16,8 +16,8 @@ function ProductsHome() {
 
   useEffect(() => {
     const fetchData = async () => {
-      console.log("URL_REACT:", process.env.NEXT_PUBLIC_URL_REACT);
-      const res = await fetch(`${process.env.NEXT_PUBLIC_URL_REACT}/products`, { cache: "no-store" });
+      console.log("URL_REACT:", process.env.NEXT_PUBLIC_URL);
+      const res = await fetch(`${process.env.NEXT_PUBLIC_URL}/products`, { cache: "no-store" });
       const result = await res.json();
       setData(result);
     };

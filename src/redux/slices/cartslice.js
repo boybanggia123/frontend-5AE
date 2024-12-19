@@ -9,7 +9,7 @@ export const fetchCart = createAsyncThunk(
   "cart/fetchCart",
   async (userId, thunkAPI) => {
     try {
-      const response = await axios.get(`${process.env.NEXT_PUBLIC_URL_REACT}/cart/${userId}`, {
+      const response = await axios.get(`${process.env.NEXT_PUBLIC_URL}/cart/${userId}`, {
         headers: {
           "Cache-Control": "no-store",
         },
@@ -28,7 +28,7 @@ export const addToCart = createAsyncThunk(
       return thunkAPI.rejectWithValue({ message: "User is not logged in" });
     }
     try {
-      const response = await axios.post(`${process.env.NEXT_PUBLIC_URL_REACT}/cart`, {
+      const response = await axios.post(`${process.env.NEXT_PUBLIC_URL}/cart`, {
         userId,
         productId,
         quantity,
@@ -47,7 +47,7 @@ export const removeFromCart = createAsyncThunk(
   "cart/removeFromCart",
   async ({ userId, productId, size }, thunkAPI) => {
     try {
-      const response = await axios.delete(`${process.env.NEXT_PUBLIC_URL_REACT}/cart`, {
+      const response = await axios.delete(`${process.env.NEXT_PUBLIC_URL}/cart`, {
         data: { userId, productId, size },
       });
       return { productId, size };
@@ -62,7 +62,7 @@ export const updateCartItemQuantity = createAsyncThunk(
   "cart/updateCartItemQuantity",
   async ({ userId, productId, quantity, size }, thunkAPI) => {
     try {
-      const response = await axios.put(`${process.env.NEXT_PUBLIC_URL_REACT}/cart`, {
+      const response = await axios.put(`${process.env.NEXT_PUBLIC_URL}/cart`, {
         userId,
         productId,
         quantity,

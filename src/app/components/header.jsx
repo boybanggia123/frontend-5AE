@@ -49,7 +49,7 @@ export default function Header() {
   }, [favouriteItems]);
 
   const { data: categories } = useSWR(
-    `${process.env.NEXT_PUBLIC_URL_REACT}/categories`,
+    `${process.env.NEXT_PUBLIC_URL}/categories`,
     fetcher
   );
 
@@ -61,7 +61,7 @@ export default function Header() {
 
     if (token) {
       setIsLoggedIn(true);
-      fetch(`${process.env.NEXT_PUBLIC_URL_REACT}/detailuser`, {
+      fetch(`${process.env.NEXT_PUBLIC_URL}/detailuser`, {
         method: "GET",
         headers: {
           Authorization: `Bearer ${token}`,
